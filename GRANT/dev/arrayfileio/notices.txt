@@ -1,0 +1,1 @@
+Hi guys, I am new at javascript and I want to know if it is possible to load either a CSV file or TXT file into an array. Basically the file gets downloaded from the net and is actually a txt file. 

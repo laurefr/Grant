@@ -1,0 +1,21 @@
+
+#chartbody{
+margin:auto;    
+}
+
+section#main {
+ margin:auto;   
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+P { text-align: center }
+H2 { text-align: center }
+h4#htitle {
+    text-align: center;
+    font-size:200%;
+    
+}

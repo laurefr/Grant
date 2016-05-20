@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app>
+
+  <head>
+       <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+   
+     <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+      
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  
+     </head>
+
+  <body>
+      
+ <div class="container">
+ <div class="row">
+
+    <div class="col-md-12" ng-controller="MainController">
+        
+
+		<h3>Populate a DOM select element from a JSON file on page load</h1>
+
+	 <select id="people"></select>
+    	
+    <button id="btn1">Enter names</button><br><br>
+
+ 
+   </div>
+   
+   </div>
+   
+   <div class="row">
+    <div class="col-md-12" ng-controller="MainController">
+        
+		<h3 id="personselected"></h3>
+
+   </div>
+   </div>
+  
+   <div class="row">
+    <div class="col-md-12" id="target"></div>
+   </div>
+  
+  
+  
+   </div>
+   
+   
+   
+   
+<script>
+//BUTTON EVENT LISTENERS
+ document.getElementById("btn1").addEventListener('click',thecountry,false);
+
+function thecountry(){
+    var personSelected = document.getElementById("people").value; 
+    
+    document.getElementById("target").innerHTML = personSelected
+}
+
+
+//ADD EVENT LISTENERS
+window.addEventListener("load", start, false);
+
+
+function start(){
+     document.getElementById("people").addEventListener("change", ps,false);
+      }
+      
+      
+function ps(){
+var personSelected = document.getElementById("people").value; 
+//alert(personSelected);
+    document.getElementById("personselected").innerHTML = personSelected
+}
+
+
+
+
+// Get the INPUT DATA from a JSON file and update the charts
+ajaxcall();
+
+/** **************************************************************************************** **/
+
+
+
+function ajaxcall () {
+/* Javascript AJAX REQUEST TO JSON FILE */
+data = "person.json";
+
+// function salesfunction() {
+  //  alert(data);
+  //  data1 ="person.json";
+  
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      data1 = xhttp.responseText;
+     // alert(data1);
+      data = JSON.parse(data1);
+     //DATA PARSED NOW _ CARRY OUT ACTIONS ON THE DATA OBJECTS WITHIN HERE 
+     console.log('Error:', data);
+     
+     //Accessing data in the nested array
+     //var value = data.person[1].name;
+     //alert (value);
+     
+     //loop through the nested json
+     for(var i = 0, l = data.person.length; i < l; i++) {
+    // alert(data.person[i].name);
+ 
+ 
+    // Populate the HTML DOM Form Select Button from the JSON File contents
+    var x = document.getElementById("people");
+    var option = document.createElement("option");
+    option.text = data.person[i].name;
+
+    x.add(option);
+     
+         
+     }
+
+     
+ /* AJAX REQUEST END ******************************************************  */
+    }
+  };
+  xhttp.open("GET", data, true);
+  xhttp.send();
+}  
+
+ </script>
+
+  
+  </body>
+
+</html>

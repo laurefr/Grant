@@ -1,0 +1,108 @@
+body {
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  font-family: 'Arial'; }
+
+select[name="source"] {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+h1 {
+  color: #FFF;
+  background: #5b883d;
+  margin: 0;
+  padding: 25px;
+  text-transform: uppercase; }
+
+h2, h3, h4, h5 {
+  color: #333333; }
+
+p {
+  display: inline-block;
+  margin-right: 30px; }
+  @media screen and (max-width: 37.5em) {
+    p {
+      display: block;
+      padding-top: 10px; } }
+
+form {
+  background: #5b883d; }
+
+input[type="text"] {
+  width: 40px; }
+
+input {
+  margin: 10px; }
+
+canvas, table {
+  margin: 0 25px 25px 0;
+ /* display: inline-block;  */
+    height:211px;
+    color:#000;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 100px; }
+
+.charts-container {
+  background:rgba(122, 122, 122, 0.1);
+   background:pink;
+  padding: 25px 0; }
+
+.third {
+  margin: auto;
+  text-align: center;
+ 
+  width: 33%;
+  display: inline-block;
+  background: #FFF; }
+  @media screen and (max-width: 37.5em) {
+    .third {
+      width: 90%;
+      margin-right: 0;
+      margin-bottom: 20px; } }
+
+table th {
+  padding: 0 10px 2px 0; }
+
+.table {
+  overflow: auto;
+  height: 320px; }
+
+canvas#chart-area {
+    width: 90% !important;
+}
+
+td, th {
+    /* padding: 20px; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a.canvasjs-chart-credit {
+    display: none;
+}
+/*
+canvas.canvasjs-chart-canvas {
+    height: 320px;
+    width: 320px;
+}
+*/
+
+div#chartContainer {
+    width: 300px;
+    height: 300px;
+}
+
+div#chartContainer1 {
+    width: 300px;
+    height: 300px;
+}
+canvas.canvasjs-chart-canvas {
+    width: 300px;
+    height: 300px;
+}

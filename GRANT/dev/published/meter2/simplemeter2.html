@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Blood Donation</title>
+    	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+   
+     <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/modern-business.css" rel="stylesheet">
+
+
+ <link rel="stylesheet" type="text/css" href="meter.css">
+
+</head>
+
+
+<body>
+    
+<div id="wrapper">
+        
+     <div id="outercontainer">
+     <div id="innercontainer"><img src="bloodimg.png"></div>
+    
+   </div> <!-- Outer container -->
+   
+   
+<div class="container-fluid">
+<!-- ROW 1 -->
+<div class="row">
+    
+    <div id="meterblurb"></div>
+    
+<div id="userinputs" class="col-md-12">
+
+ <div class="bloodbox">
+     Blood Type
+
+  <input list="bloodtype" name="test" id="bt">
+  <datalist id="bloodtype">
+    <option>Type A</option>
+    <option>Type B</option>
+    <option>Type O</option>
+  </datalist>
+
+  </div>
+   <div class="bloodbox">Amount <input type="number" id="amount" value="0" max="100"/></div>
+   
+   <div class="bloodbox"><input type="image" id="btn2" src="redbutton2.png" alt="Submit" width="50%" height="50%"></div>
+  
+</div>
+       </div>
+<!-- END ROW 1 -->
+
+<!-- ROW 2 -->
+<div class="row">
+<div class="col-md-12"
+    <div id="meterheading"></div>
+     <div id="ameter"></div>
+    <div id="bmeter"></div>
+    <div id="ometer"></div>
+    
+   </div>
+       </div>
+<!-- END ROW 2 -->
+
+</div>
+<!-- END Container -->
+ 
+</div> 
+<script src="meter.js"></script>
+
+</body>
+</html>

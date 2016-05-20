@@ -1,0 +1,51 @@
+ 
+	#wrapper {
+	width:96%;
+	max-width: 920px;
+	margin: auto;
+	padding: 2%;
+	border: 0px solid #778899;
+        background-color:#778899;
+	min-height:600px;
+	} 
+		
+	#main {
+		width: 100%;
+	/**	border: 5px solid #4d3159; **/
+		/** min-height:150px; **/
+		}	
+	
+		H2 { text-align: center;font-size:3em;font-family:arial;color:#fff;}
+		H1 { text-align: center;font-size:2em;font-family:arial}
+		
+	/* ************************************************* Media Queriesn********** */
+     @media screen and (max-width: 480px) {
+	     H1 { text-align: center;font-size:2em;font-family:arial}
+	 }
+	 p {font-family:arial;color:#fff;}
+	 #randommember {color:#fff;}
+	 
+	 
+	 p#output1 {
+    color: #fff;
+    font-size:2em;
+}
+	 
+	 
+	 #winnerimage {
+    background-image: linear-gradient(rgba(0,0, 0, 0.2), rgba(0,0,0, 0.2)), url('winner.png');
+    background-image: linear-gradient(rgba(230,92, 0, 0.7)), url('winner.png');
+    padding: 50px;
+}
+	
+	
+	button#btn2 {
+    font-size: 1em;
+    padding: 5px;
+    color: red;
+}
+
+h1#thewinner {
+    color: #fff;
+}
+

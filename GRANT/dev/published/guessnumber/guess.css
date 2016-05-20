@@ -1,0 +1,44 @@
+H1 {
+    font-family:arial;
+}
+
+H2 {
+    font-family:arial;
+}
+
+#wrapper {
+    width: 96%;
+    max-width: 920px;
+    margin: auto;
+    padding: 2%;
+    border: 0px solid #4d3159;
+    background-color: #cbcc00;
+    min-height: 600px;
+}
+
+#outercontainer {
+    text-align:center;
+}
+
+
+.guessbox {
+margin-bottom:30px;    
+  font-family:arial;
+}
+
+#resultguess {
+margin-bottom:10px;    
+  font-family:arial;
+}
+
+.resultbox {
+margin-bottom:10px;  
+margin-top:10px;
+  font-family:arial;
+}
+
+
+input[type="number"]{
+    width:50px;
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="projectcss.css">
+		
+	</head>
+
+	<body>
+		<div class= "main">
+			<h1>Check your BMI</h1>
+			
+			
+			<div id="input">
+				
+				<form id="myForm">
+					<p>
+					Enter your weight (kg): <input type="text" id="kg" name="weight" onchange="history.go(0)" autofocus></p>
+		
+					<p>
+					Enter your height (m): <input type="text" id="m"  name="height" onchange="history.go(0)"></p>
+					
+					<input type="button" class= "button" value = "Calculate my BMI" onclick="myBMI()">
+					
+				</form>
+				
+			</div>
+				
+			<div id="answer">
+				<p id="title"> Your BMI is:</p>
+				<p id = "result"></p>
+				<p id = "resultInfo"></p>
+			</div>
+	
+			<div id="chart">
+		
+				<table id="myTable">
+					<tr>
+						<td id="un">Underweight</br>(0 - 18.5)</td>
+						<td id="no">Normal </br>(18.6 - 24.9)</</td>
+					</tr>
+					
+					<tr>
+						<td id="ob">Obese </br>(30+)</</td>
+						<td id="ov">Overweight </br>(25 - 29.9)</</td>
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+	
+	
+		<script type ="text/javascript">
+		
+		function myBMI() {
+		
+			var a= document.getElementById('kg').value;
+			var b= document.getElementById('m').value;
+			
+			
+			var bmi = a/(b*b);
+			var r=bmi.toFixed(1);
+			
+			if (a=="" || b=="" || isNaN(a) || isNaN(b)) 
+				{document.getElementById('resultInfo').innerHTML="Input not valid. Try again.";
+				 document.getElementById('title').style.visibility="hidden";}
+				
+			else{
+				
+				if (r <18.9){document.getElementById('resultInfo').innerHTML="You are underweight!";
+							 document.getElementById('un').style.backgroundColor="#ffcce6";}
+				else if (r <24.9){document.getElementById('resultInfo').innerHTML="You are normal!"; 
+								  document.getElementById('no').style.backgroundColor="#33cc33";}
+								  
+				else if (r<29.9){document.getElementById('resultInfo').innerHTML="You are overweight!"; 
+								 document.getElementById('ov').style.backgroundColor="#ff8000";}
+				
+				else {document.getElementById('resultInfo').innerHTML="You are obese!!"; 
+					  document.getElementById('ob').style.backgroundColor="#ff0000";}
+
+				document.getElementById('result').innerHTML= r;}
+			}
+		
+			
+			
+		</script>
+
+	</body>
+	
+</html>
+
+ 
+ 

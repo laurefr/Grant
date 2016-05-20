@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title> Demo | Responsive Web</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+	 <link rel="stylesheet" type="text/css" href="rwg.css">
+
+	
+	</head> 
+	
+	<!-- Invoke the funcction displaydate on webpage load -->	
+	<body>
+		
+		<div id="wrapper">
+	
+			<section id="main">
+			    <!-- display random array item -->
+				<span><H2>Load a csv file, add to a local array and display on webpage</H2></span>
+				<br>
+				<span><H1 id="randomwinner"></H1></span>			
+			</section>
+<br><br>		
+<input type="file" id="fileinput" />
+
+<br><br>
+
+<!-- display all current array items -->
+
+ <p id="output1"></p>	
+	
+
+</div>
+
+
+ <script>
+ 
+  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+
+  function readSingleFile(evt) {
+    //Retrieve the first (and only!) File from the FileList object
+    var f = evt.target.files[0]; 
+
+    if (f) {
+      //CALL the Filereader
+      var r = new FileReader();
+      
+       //use onload store the file in javascript variable
+      r.onload = function(e) { 
+	      var contents = e.target.result;
+	      //alert(contents);
+	      
+          //CREATE ARRAY split on the comma
+	      var myarray = contents.split(',');
+          for(var i = 0; i < myarray.length; i++)
+          {
+          //  alert(myarray[i]);
+         }
+
+	    //PRINT ARRAY in DIV onto HTML page
+        function printtohtml(){
+        var printThis = "";
+       for(var i = 0; i < myarray.length; i++){
+       //printThis += "<br>"+myarray[i];
+       printThis += myarray[i] + " ";
+
+         }
+       return printThis; // <-- to be printed to the div
+         }
+        document.getElementById('output1').innerHTML = printtohtml();
+	      
+/*
+        alert( "Got the file.n" 
+              +"name: " + f.name + "n"
+              +"type: " + f.type + "n"
+              +"size: " + f.size + " bytesn"
+              + "starts with: " + contents.substr(1, contents.indexOf("n"))
+        );  */
+        
+      }
+      //Read the file as text asynchronously
+      r.readAsText(f);
+      
+    } else { 
+      alert("Failed to load file");
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+     
+ </script>
+    
+	</body>
+</html>

@@ -1,0 +1,27 @@
+ 
+	#wrapper {
+	width:96%;
+	max-width: 920px;
+	margin: auto;
+	padding: 2%;
+	border: 0px solid #4d3159;
+        background-color:#c2a5cb;
+	min-height:600px;
+	} 
+		
+	#main {
+		width: 100%;
+	/**	border: 5px solid #4d3159; **/
+		/** min-height:150px; **/
+		}	
+	
+		H2 { text-align: center;font-size:2em;font-family:arial;color:#4d3159;}
+		H1 { text-align: center;font-size:2em;font-family:arial}
+		
+	/* ************************************************* Media Queriesn********** */
+     @media screen and (max-width: 480px) {
+	     H1 { text-align: center;font-size:2em;font-family:arial}
+	 }
+	 p {font-family:arial;}
+	 #randommember {color:#fff;}
+		

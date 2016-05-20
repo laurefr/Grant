@@ -1,0 +1,7 @@
+{
+"Type" : "Gold and Silver",
+"Products" : ["Gold","Silver"],
+"Product1" : ["100","200","300","400","420","430","500"],
+"Product2" : ["800","500","486","455","878","120","544"],
+"charLabels" : ["January","February","March","April","May","June","July", "August", "September", "October", "November", "December"]
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bar Chart</title>
+		
+	</head>
+	<body>
+		
+
+            		<div id="wrapper">
+	
+			<section id="main">
+			    <!-- display random array item -->
+				<span><H2>Bar chart</H2></span>
+		
+					
+			</section>
+
+
+
+
+<form name="myform" onsubmit="tosubmit()" action="bar.html">
+<input id="input1" />
+<input id="input2" />
+<input id="input3" />
+<button id="btn1">Enter values for chart</button>
+</form>
+      
+
+	<script>
+
+    
+
+//BUTTON EVENT LISTENERS
+// document.getElementById("btn1").addEventListener('click',function(x){test(input1.value,input2.value,input3.value)},false);
+ document.getElementById("btn1").addEventListener('click',tosubmit,false);
+
+
+function tosubmit() {
+// Getting the value of your text input
+var FNum = document.getElementById("input1").value;
+var SNum = document.getElementById("input2").value
+var PNum = document.getElementById("input3").value
+
+//alert(FNum + " " + SNum + " " + PNum);
+
+// Storing the value above into localStorage
+localStorage.setItem("fNum", FNum);
+localStorage.setItem("sNum",SNum);
+localStorage.setItem("pNum",PNum);
+return true;
+        }
+
+</script>
+	
+	
+	
+       
+	</body>
+</html>

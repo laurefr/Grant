@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+<script>
+
+string_a= "The quick fox";
+string_b= "and The quick fox jumps over the lazy dog."
+
+
+// find the first occurance of all of string a in string b
+first_occurance=string_b.indexOf(string_a);
+
+
+if(first_occurance==-1)
+{
+     alert('Search string Not found')   
+}else
+
+{
+   
+    string_a_length=string_a.length;
+    if(first_occurance==0)
+    {
+     new_string=string_b.substring(string_a_length);
+    }else
+    {
+       // substring before first occurance and substring after first occurance
+        new_string=string_b.substring(0,first_occurance);
+        new_string+=string_b.substring(first_occurance+string_a_length);  
+    }
+        alert(new_string);
+}
+
+</script>
+
+
+
+</body>
+
+</html>

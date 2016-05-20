@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    
+<body>
+    
+
+<h1>Submit form to server using POST technique</h1>
+<form action="hellopost.php" method="post" target="_blank" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate> 
+
+<!-- Input search  -->
+<div><div class="leftspan">Input Search</div><div><input type="search" name="googlesearch"></div></div>
+
+<div><div class="leftspan">(Input Text) Enter your User name</div><div><input type="text" name="userid" required></div></div>
+
+<div><div class="leftspan">(Input Password) Enter your password</div><div><input type="password" name="psw"></div></div>
+
+ <!-- TEXT AREA -->
+<div><div class="leftspan">(Input Text Area) Enter your profile</div><div><textarea name="message" rows="10" cols="30">
+Write a short description of yourself
+</textarea></div></div>
+
+ <!-- INPUT EMAIL -->  
+<div><div class="leftspan">(Input email) Enter your email</div><div><input type="email" name="email" required></div></div>
+
+ <!-- INPUT TELEPHONE -->  
+<div><div class="leftspan">(Input telephone) Enter your Telephone</div><div><input type="tel" name="usrtel"></div></div>
+
+ <!-- INPUT NUMBER -->  
+<div><div class="leftspan">(Input number) Enter your Age</div><div><input type="number" name="points" min="0" max="100" step="10" value="30"></div></div>
+
+<!-- INPUT DATE -->
+<div><div class="leftspan">(Input date) Enter your DOB</div><div><input type="date" name="bday" max="1979-12-31"></div></div>
+
+<!-- INPUT MONTH -->
+<div><div class="leftspan">(Input month) Enter month of birth</div><div> <input type="month" name="bdaymonth"></div></div>
+
+<!-- INPUT MONTH -->
+<div><div class="leftspan">)Input week)</div><div> <input type="week" name="week_year"></div></div>
+
+<!-- INPUT TIME -->
+<div><div class="leftspan">(Input time)</div><div><input type="time" name="usr_time"></div></div>
+
+<!-- INPUT URL -->
+<div><div class="leftspan">Input url</div><div> <input type="url" name="homepage"></div></div>
+
+<!-- INPUT RANGE -->
+<div><div class="leftspan">Input range</div><div> <input type="range" name="points" min="0" max="10"></div></div>
+
+<!-- INPUT COLOR -->
+<div><div class="leftspan">Input colour</div><div> <input type="color" name="favcolor" value="#ff0000"></div></div>
+
+<!-- INPUT RADIO -->
+<div><div class="leftspan">Input radio choice</div><div> <input type="radio" name="sex" value="male" checked> Male
+  <input type="radio" name="sex" value="female"> Female</div></div>
+
+<!-- INPUT CHECK BOX -->
+<div><div class="leftspan">Input check box</div><div>    <input type="checkbox" name="vehicle1" value="Bike">I have a bike
+<input type="checkbox" name="vehicle2" value="Car">I have a car </div></div>
+
+
+
+
+<!-- INPUT DROP DOWN -->
+<div><div class="leftspan">Input Dropdown List</div><div> 
+  <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+
+</div></div>
+  
+<!-- INPUT DATA LIST -->
+<div><div class="leftspan">Input Data List</div><div> 
+ <input list="browsers" name="favcolour">
+  <datalist id="browsers">
+    <option value="red">
+    <option value="blue">
+    <option value="green">
+    <option value="yellow">
+    <option value="pink">
+  </datalist>
+
+</div></div>
+  
+<!-- GROUP WITH FIELDSET -->
+<div><div class="leftspan">Group with Fieldset</div><div>  
+  
+   <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+  </div></div>
+  
+ 
+   <!-- SUBMIT -->
+<div><div class="leftspan">Submit button</div><div><input type="submit" value="Submit"> </div></div>
+
+<div><div class="leftspan">HTML5 button</div><div><button type="button">Button submit</button> </div></div>
+
+  <!-- INPUT IMAGE -->
+<div><div class="leftspan">Input submit image</div><div> <input type="image" src="si.jpg" alt="Submit" width="225px" height="63px"></div></div>
+
+  
+</form>
+  <!-- ************************************************************************************************************** -->
+
+<h1>Submit form to server using GET technique</h1>
+<form action="helloget.php" method="get" target="_blank" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off"> 
+
+<!-- GROUP WITH FIELDSET -->
+<div><div class="leftspan">Group with Fieldset</div><div>  
+  
+   <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="" required>
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="" required>
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+  </div></div>
+
+<!-- INPUT DATE -->
+<div><div class="leftspan">(Input date) Enter your DOB</div><div><input type="date" name="bday" max="1979-12-31" required></div></div>
+
+<!-- INPUT MONTH -->
+<div><div class="leftspan">(Input month) Enter month of birth</div><div> <input type="month" name="bdaymonth"></div></div>
+
+<!-- INPUT MONTH -->
+<div><div class="leftspan">)Input week)</div><div> <input type="week" name="week_year"></div></div>
+
+<!-- INPUT TIME -->
+<div><div class="leftspan">(Input time)</div><div><input type="time" name="usr_time"></div></div>
+
+<!-- INPUT URL -->
+<div><div class="leftspan">Input url</div><div> <input type="url" name="homepage"></div></div>
+
+<!-- INPUT RANGE -->
+<div><div class="leftspan">Input range</div><div> <input type="range" name="points" min="0" max="10"></div></div>
+
+<!-- INPUT COLOR -->
+<div><div class="leftspan">Input colour</div><div> <input type="color" name="favcolor" value="#ff0000"></div></div>
+
+<!-- INPUT RADIO -->
+<div><div class="leftspan">Input radio choice</div><div> <input type="radio" name="sex" value="male" checked> Male
+  <input type="radio" name="sex" value="female"> Female</div></div>
+
+<!-- INPUT CHECK BOX -->
+<div><div class="leftspan">Input check box</div><div>    <input type="checkbox" name="vehicle1" value="Bike">I have a bike
+<input type="checkbox" name="vehicle2" value="Car">I have a car </div></div>
+
+<!-- FILE UPLOAD -->
+<div><div class="leftspan">Input file upload</div><div> <input type="file" id="fileinput" /></div></div>		
+
+
+
+  <!-- INPUT IMAGE -->
+<div><div class="leftspan">Input submit image</div><div> <input type="image" src="si.jpg" alt="Submit" width="225px" height="63px"></div></div>
+
+  
+</form>
+
+
+
+<p>Note that the form itself is not visible.</p>
+
+<H2>Key Attributes</h2>
+<p>
+Submitting Forms<br>
+The <b>action</b> attribute defines the action to be performed when the form is submitted.<br>
+The method attribute specifies the HTTP method (GET or POST) to be used when submitting the forms<br>
+You can use GET (the default method) if the form submission is passive (like a search engine query), and without sensitive information
+When you use GET, the form data will be visible in the page address: action_page.php?firstname=Mickey&lastname=Mouse<br>
+GET is best suited to short amounts of data. Size limitations are set in your browser.
+<br><br>
+
+You should use POST if the form is updating data, or includes sensitive information (password). POST offers better security because the submitted data is not visible in the page address.
+<br><br>All Form element attributes:
+ action="action_page.php" method="post" target="_blank" accept-charset="UTF-8"
+enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
+
+<br><br>
+
+The <b>value</b> attribute specifies the initial value for an input field:<br>
+The <b>readonly</b> attribute specifies that the input field is read only (cannot be changed):<br>
+The <b>disabled</b> attribute specifies that the input field is disabled.<br>
+
+A <b>disabled</b> element is un-usable and un-clickable. Disabled elements will not be submitted.<br>
+The <b>size</b> attribute specifies the size (in characters) for the input field:<br>
+The <b>maxlength</b> attribute specifies the maximum allowed length for the input field:<br>
+The <b>autocomplete</b> attribute specifies whether a form or input field should have autocomplete on or off.<br>
+The <b>autofocus</b> attribute is a boolean attribute. When present, it specifies that an <input> element should automatically get focus when the page loads.<br>
+The <b>formmethod</b> attribute defines the HTTP method for sending form-data to the action URL.<br>
+The <b>required</b> attribute is a boolean attribute.<br>
+When present, it specifies that an input field must be filled out before submitting the form<br>
+The <b>step</b> attribute specifies the legal number intervals for an <input> element.<br>
+</p>
+
+
+http://www.w3.org/TR/html401/interact/forms.html#h-17.2.1
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fruit and Vegetable Sales</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+       
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <select name="source" id="source" value="fruit">
+            <option value="fruit" selected>Fruit sales</option> 
+            <option value="vegetables">Vegetable sales</option>
+            </select>
+
+        <h1 id="charTitle">Fruit and Vegetable Sales</h1>
+
+   
+        <div class="charts-container">
+            <div class="third">
+                <h3>Sales per month</h3>
+                <canvas id="chart-area">Sales per month</canvas> 
+            </div>
+
+ <div class="third">
+                <h3>Average Sales Per Month</h3>
+                <canvas id="chart-area1">Average sales per product</canvas>
+            </div>
+
+         
+            <div class="third">
+                           <table>
+                        <h3>The Data</h3>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    
+               
+            </div>
+        </div>
+        
+      <!--
+        <form>
+            
+            <p>Enter sales for <span>next month's</span>:</p>
+            <label id="x">Product1</label><input name="product1" id="xval" type="text" required/>
+            <label id="y">Product2</label><input name="product2" id="yval" type="text" required/>
+            <input type="submit" id="ata" value="Add"/>
+        </form>
+-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="Chart.js"></script>
+        <script src="main.js"></script>
+
+        
+    </body>
+</html>

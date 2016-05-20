@@ -1,0 +1,96 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<title>Salary Calculator</title>
+	<link rel="stylesheet"
+	type="text/css"
+	href="style.css">
+
+	</head>
+	<body>
+	<h1>Salary Calculator</h1>
+	<p>What's your salary per year before tax?</p>
+	<br> £
+	<input type="text"
+	id="num1" />
+	<input type="button"
+	class="myButton"
+	value="Calculate"
+	onclick="calculate()" />
+	<br>
+	<div class="results-container">
+	<div class="results-table">
+	<table border="2"
+	cellpadding="5"
+	cellspacing="3">
+	<caption>Results table and chart:</caption>
+	<tr>
+	<td id="column">Gross salary:</td>
+	<td>
+	£
+	<input type="text" class="box-style"
+	id="gross">
+	</td>
+	</tr>
+	<tr>
+	<td>Tax free allowance:</td>
+	<td>
+	£
+	<input type="text" class="box-style"
+	id="allowance">
+	</td>
+	</tr>
+	<tr>
+	<td>Total taxable:</td>
+	<td>
+	£
+	<input type="text" class="box-style"
+	id="taxable">
+	</td>
+	</tr>
+	<tr>
+	<td>Income tax paid:</td>
+	<td>
+	£
+	<input type="text" class="box-style"
+	id="incomeTax">
+	</td>
+	</tr>
+	<tr>
+	<td>National insurance:</td>
+	<td>
+	£
+	<input type="text" class="box-style"
+	id="insurance">
+	</td>
+	</tr>
+	<tr>
+	<td>Total deductions:</td>
+	<td>
+	£
+	<input type="text" class="box-style"
+	id="deductions">
+	</td>
+	</tr>
+	<tr>
+	<td><strong>Take-home salary:</strong></td>
+	<td>
+	£
+	<input type="text" class="box-style"
+	id="finalSalary">
+	</td>
+	</td>
+	</tr>
+	</table>
+	</div>
+	<div id="chart-container"></div>
+	</div>
+	<!-- Javascript files -->
+	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<script src="script.js"></script>
+
+	</body>
+	</html>
+

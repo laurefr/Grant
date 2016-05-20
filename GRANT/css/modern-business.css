@@ -1,0 +1,471 @@
+/*!
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 140px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    font-family: 'Raleway', sans-serif;
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 50%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+  
+/* background-color: #cc5200; */
+background-color: #d89038;
+    
+color:#fff;
+padding:40px;
+border-top:1px solid #fff;
+}
+
+.f1 {
+    margin: 20px 0;
+    background-color: #7a7a7a;
+color:#fff;
+padding:20px;
+}
+
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+    
+    .col-md-6 {
+    padding-bottom:5%;
+}
+}
+
+
+
+
+
+
+/** My custom css **/
+.navbar-inverse {
+  
+       background-image:
+        linear-gradient(rgba(0,0, 0, 0.6), rgba(0,0,0, 0.6)), 
+        url('/images/operations.jpg');
+
+background-image:
+        linear-gradient(rgba(230,92, 0, 0.7)), 
+        url('/images/operations.jpg');
+  
+  padding:40px;
+}
+
+.navbar-inverse1 {
+  background-color: #7a7a7a;
+  border-color: #7a7a7a;
+}
+
+.navbar-inverse1 a{
+color:#fff;    
+}
+ 
+
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #B9B986;
+  font-size:1.7em;
+}
+
+body {
+    font-size:1.6em;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+.page-header {
+   margin: 0px;
+}
+
+.panel-default>.panel-heading {
+    border-color: #fff ;
+    border-bottom: none;
+    
+    /* background-color: #cc5200; */
+   background-color: #d89038;
+
+    color:#fff;
+  }
+  
+
+
+  .btn-block {
+  background-color: #B9B986;
+}
+
+/* FRONT PAGE BUTTONS */
+.btn-default.f {
+ background-color: #C0C0C0; 
+  border-color: #fff;
+   color: #fff;
+}
+.btn-default.f:hover{
+background-color: rgba(0,0, 0, 0.6); 
+ color: #fff;
+}
+
+.btn-default.f:visited{
+  /* background-color: #cc5200; */
+   background-color: #d89038;
+
+  color: #fff;
+}
+
+
+/* PROJECT PAGE BUTTONS */
+
+.btn-default1 {
+ background-color: #C0C0C0;
+  color: #fff;
+}
+
+a.btn-default1 {
+ color: #fff;
+}
+
+
+.btn-default1:hover{
+ background-color: rgba(0,0, 0, 0.6);  
+  border-color: #fff;
+}
+
+.btn-default1:visited{
+ /* background-color: #cc5200; */
+   background-color: #d89038;
+
+  border-color: #fff;
+}
+
+
+
+.page-header {
+   margin-top:15px;
+   margin-bottom: 15px; 
+   border-bottom:0px;
+}
+
+.btn-primary {
+  color: #fff;
+ /* background-color: #cc5200; */
+   background-color: #d89038;
+
+  border-color: #fff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+background-color: rgba(0,0, 0, 0.6); 
+  border-color: #fff;
+}
+
+.btn-primary:visited{
+ /* background-color: #cc5200; */
+   background-color: #d89038;
+  border-color: #fff;
+}
+
+/** BANNER **/
+
+.banner {
+  margin-top: 15px;
+  font-size: 1.8em;
+  color: #333;
+ 
+  padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.banner1 {
+  margin-top: 20px;
+  font-size: 140%;
+  color: #7a7a7a;
+ 
+  padding-top: 20px;
+padding-bottom: 20px;
+}
+
+p.hp {
+  padding-bottom: 20px;
+}
+
+/** DATABASE BOX **/
+.panel.panel-default.dbback {
+  /*  background-image: url("/images/database.jpg"); */
+}
+
+/** APPROACH BOX **/
+.panel.panel-default.approach {
+ /*  background-image: url("/images/comms.jpg"); */
+}
+
+/** WEB BOX **/
+.panel.panel-default.web {
+  /*  background-image: url("/images/web.jpg");*/
+}
+
+/** SPOTLIGHT BOX **/
+.panel.panel-default.opm {
+  /*  background-image: url("/images/opm.jpg"); */
+}
+
+/** ABOUT ME **/
+.panel.panel-default.me {
+ /* background-image: url("/images/approach.jpg"); */
+}
+
+/** OPERATIONS **/
+.panel.panel-default.operations {
+  /*  background-image: url("/images/operations.jpg"); */
+}
+
+.col-md-4.img-portfolio1.dblue {
+  color: #002147;
+}
+
+a:focus, a:hover {
+     color:#cococo;
+  text-decoration: none; 
+}
+
+
+
+/** BULLHORN REACH PLUGIN THEMING **/
+
+ 
+
+.embed-container {
+
+    position: relative;
+
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+
+    max-width: 100%;
+
+    min-height: 1290px;
+
+    margin: 0px auto 60px auto;
+
+}
+
+ 
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+<!-- SCALE IMAGE -->
+#content {
+     overflow: scroll; 
+}
+
+.logo {
+    opacity: 0;
+    display: none;
+    width: 95%;
+    -webkit-transform-origin: 53% 0;
+    -moz-transform-origin: 53% 0;
+    -ms-transform-origin: 53% 0;
+    transform-origin: 53% 0;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition: opacity .1s ease .1s;
+}
+.index .logo {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.header-inner {
+    position: fixed;
+    pointer-events: none;
+    top: 50%;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+}
+
+
+
+a.navbar-brand {
+    color: #fff !important;
+}
+
+.panel-default {
+   
+}
+
+.panel-heading {
+    padding: 20px 25px;
+}
+
+.panel-body {
+    padding: 25px;
+}
+
+.col-md-4 {
+    
+}
+
+.row{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.container.cus {
+    margin-bottom: 30px;
+}
+
+.h4, h4 {
+    font-size: 1.4em;
+}
+
+.container.homep {
+    margin-bottom: 30px;
+}
+.h3, h3 {
+ margin-top:30px;
+ margin-bottom:30px;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+
+.row.project {
+    margin-bottom: 45px;
+}
+
+div#iframevideo {
+    text-align: center;
+    width:100%;
+}
+
+.fa-linkedin-square:before {
+    color: #fff;
+    opacity:0.7;
+}
+
+.fa.fa-github-square.fa-2x {
+    color: #fff;
+    opacity:0.7;
+}
+
+.row.specialisation {
+margin-top:0px;
+margin-bottom:0px;
+    
+}
+
+.col-md-8 {
+    margin-bottom: 15px;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse {
+    
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #fff;
+}

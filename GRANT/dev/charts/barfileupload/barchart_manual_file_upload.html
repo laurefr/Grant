@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bar Chart</title>
+		
+	</head>
+	<body>
+		
+
+            		<div id="wrapper">
+	
+			<section id="main">
+			    <!-- display random array item -->
+				<span><H2>Bar chart</H2></span>
+		
+					
+			</section>
+
+	<section id="main">
+    <!-- display random array item -->
+	<span><H2>Cases and Session</H2></span>
+	</section>
+	    
+		<div style="width: 90%">
+			<canvas id="canvas" height="450" width="950"></canvas>
+		</div>
+
+            		<div id="wrapper">
+	
+
+<input id="input1" />
+<input id="input2" />
+<input id="input3" />
+<button id="btn1">Add data</button>
+<button id="btn2">Remove data</button>
+
+<input type="file" id="fileinput" />
+
+
+
+ <p id="output1"></p>
+
+
+	<script>
+
+//BUTTON EVENT LISTENERS
+document.getElementById("btn1").addEventListener('click',function(x){loaddata(input1.value,input2.value,input3.value)},false);
+document.getElementById("btn2").addEventListener('click',removedata,false);
+
+
+/* XXXXXXXXXXXX PRESENT CHART XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  */
+
+	var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+	var barChartData = {
+		// labels : ["January","February","March","April","May","June","July"],
+		labels : [],
+		
+		datasets : [
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,0.8)",
+				highlightFill: "rgba(220,220,220,0.75)",
+				highlightStroke: "rgba(220,220,220,1)",
+				//data :  [32,42,52,23,3,34,55]
+				data : []
+			},
+			{
+				fillColor : "rgba(151,187,205,0.5)",
+				strokeColor : "rgba(151,187,205,0.8)",
+				highlightFill : "rgba(151,187,205,0.75)",
+				highlightStroke : "rgba(151,187,205,1)",
+				//data : [32,42,52,23,3,34,55]
+				data : []
+			}
+		]
+
+	}
+	
+	
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx).Bar(barChartData, {
+			responsive : true
+		});
+	}
+    
+/* XXXXXXXXXX   ADD DATA MANUALLY XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  */
+
+
+function loaddata(x,y,z){
+myBar.addData([x,y],z);
+}
+
+function removedata(){
+myBar.removeData();
+}
+
+function test(){
+alert("Hi");
+window.myBar.addata([22,60],"boo");
+}
+
+/* XXXXXXXXXXXX LOAD CHART DATA FROM CSV FILE INT0 LOCAL ARRAY XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  */
+
+  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+
+  function readSingleFile(evt) {
+    //Retrieve the first (and only!) File from the FileList object
+    var f = evt.target.files[0]; 
+
+    if (f) {
+      //CALL the Filereader
+      var r = new FileReader();
+      
+       //use onload store the file in javascript variable
+      r.onload = function(e) { 
+	      var contents = e.target.result;
+	      //alert(contents);
+	      
+          //CREATE ARRAY split on the comma
+	      var myarray = contents.split(',');
+          for(var i = 0; i < myarray.length; i++)
+          {
+          //  alert(myarray[i]);
+         }
+
+	    //PRINT ARRAY in DIV onto HTML page
+        function printtohtml(){
+        var printThis = "";
+       for(var i = 0; i < myarray.length; i++){
+        printThis += myarray[i] + " ";
+         }
+
+       return printThis; // <-- to be printed to the div
+         }
+        document.getElementById('output1').innerHTML = printtohtml();
+	      
+
+
+/* XXXXXXXXXXXX  LOOP LOCAL ARRAY and ADD DATA TO CHART   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  */
+          //LOOP 
+	    
+        function printtohtml(){
+        var printThis = "";
+        var counter = 0;  // counter to loop
+        
+       for(var i = 0; i < myarray.length; i++){
+         
+        
+        if(counter < 3) {
+        //alert(counter);
+        // ADD TO VARIABLES
+        if (counter === 0){
+            var x = parseInt(myarray[i]);
+           //alert(typeof(x)); 
+        }
+       else if (counter === 1) {
+           var y = parseInt(myarray[i]);
+         // alert(y); 
+       }
+       else {
+            //COUNTER NOW AT 2
+            var z = myarray[i];
+            // alert(z);
+            //ADD DATA TO BAR CHART
+            myBar.addData([x,y],z);
+            //RESET COUNTER 
+            counter = -1;
+       }
+       
+       
+         }
+       // alert("add to array");
+        counter++;
+         }
+     
+         }
+         
+         
+   
+
+ /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  */
+
+
+
+      }
+      //Read the file as text asynchronously
+      r.readAsText(f);
+      
+    } else { 
+      alert("Failed to load file");
+    }
+  }
+
+
+
+
+
+
+
+
+</script>
+	
+        
+ <script src="Chart.js"></script>	
+	
+       
+	</body>
+</html>

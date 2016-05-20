@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    
+   <head> 
+  <link rel="stylesheet" type="text/css" href="note.css">
+    </head>
+<body>
+
+<h2>Example using the XMLHttpRequest object</h2>
+
+<button type="button" onclick="loadXMLDoc()">Display XML content</button>
+
+<p id="demo"></p>
+
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("demo").innerHTML =
+      xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "note.xml", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

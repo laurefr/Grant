@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div><h2>Accessing Open Weather API</h2></div>
+<div><p>This is a simple example of a user entering a city and retrieving the cities current weather data via an ajax call current weather data from the openweather api.</p>
+</div>
+
+
+Enter a city around the world  <input type="text" name=" City" id="thecity"> 
+<!-- <button type="button" id="btn1" onclick="loadData()">Submit</button>  -->
+<button type="button" id="btn1">Submit</button>
+
+<br><br>
+<div id="demo"><h4>AJAX Response text will go here</h4></div>
+<br>
+<div id="demo2"><h4>Parsed String response will go here</h4></div>
+<br>
+<div id="demo3"><h4>Access the objects will go here</h4></div>
+
+<script>
+
+//ADD EVENT LISTENERS
+window.addEventListener("load", start, false);
+
+function start(){
+ document.getElementById("btn1").addEventListener("click", loadData,false);
+}
+
+
+function loadData() {
+    //GET City Value from user
+    cityval = document.getElementById('thecity').value;
+    //STORE City in the string
+    //Format to present
+    data = "http://api.openweathermap.org/data/2.5/weather?q=" + cityval + "&APPID=afe24dbc851567b6dd99613b06c61f1f";
+    xmldata = "http://api.openweathermap.org/data/2.5/find?q=London&mode=xml&mode=xml&APPID=afe24dbc851567b6dd99613b06c61f1f";
+    htmldata = "http://api.openweathermap.org/data/2.5/weather?q=" + cityval + "&mode=html&APPID=afe24dbc851567b6dd99613b06c61f1f";
+    
+    //SEND Ajax 
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      //Write the response to the HTML document    
+     // document.getElementById("demo").innerHTML = xhttp.responseText;
+     var data1 = xhttp.responseText;
+     document.getElementById("demo").innerHTML = data1;
+     
+     var data2 = JSON.parse(data1);
+     document.getElementById("demo2").innerHTML = data2;
+     document.getElementById("demo3").innerHTML = data2.name;
+     
+    }
+  };
+  xhttp.open("GET", data, true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+   

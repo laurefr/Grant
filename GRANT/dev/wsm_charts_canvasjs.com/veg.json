@@ -1,0 +1,7 @@
+{
+"Type" : "Vegetable Sales",
+"Products" : ["Carrots","Spinach"],
+"Product1" : ["600","100","200","500","420","430","500"],
+"Product2" : ["300","250","350","150","600","300","700"],
+"charLabels" : ["January","February","March","April","May","June","July", "August", "September", "October", "November", "December"]
+}

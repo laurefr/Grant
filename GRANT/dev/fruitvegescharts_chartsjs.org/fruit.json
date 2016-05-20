@@ -1,0 +1,7 @@
+{
+"Type" : "Fruit Sales",
+"Products" : ["Apples","Bananas"],
+"Product1" : ["100","200","300","400","420","430","500"],
+"Product2" : ["300","250","450","350","600","300","700"],
+"charLabels" : ["January","February","March","April","May","June","July", "August", "September", "October", "November", "December"]
+}

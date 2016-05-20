@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bar Chart</title>
+		
+	</head>
+	<body>
+	    
+	<section id="main">
+    <!-- display random array item -->
+	<span><H2>Cases and Session</H2></span>
+	</section>
+	    
+		<div style="width: 90%">
+			<canvas id="canvas" height="450" width="950"></canvas>
+		</div>
+
+            		<div id="wrapper">
+	
+
+
+	<script>
+//RETRIEVE VARIABLES IN LOCAL STORAGE 
+var x = localStorage.getItem("fNum");
+var y = localStorage.getItem("sNum");
+var z = localStorage.getItem("pNum");
+alert(x + " " + y + " " + z);
+
+
+var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+
+var barChartData = {
+		labels : ["January","February","March","April","May","June","July"],
+		datasets : [
+			{
+				fillColor : "rgba(128,0,128,0.7)",
+				strokeColor : "rgba(128,0,128,0.5)",
+				highlightFill: "rgba(128,0,128,0.7)",
+				highlightStroke: "rgba(220,220,220,1)",
+				data :  []
+			},
+			{
+				fillColor : "rgba(128,128,128,0.6)",
+				strokeColor : "rgba(128,128,128,0.6)",
+				highlightFill : "rgba(128,128,128,0.6)",
+				highlightStroke : "rgba(128,128,128,0.6)",
+				data : []
+			}
+		]
+
+	}
+
+// CREATE CHART AND LOAD DATA ON PAGE LOAD
+window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx).Bar(barChartData, {
+			responsive : true
+		});
+		
+		//LOAD CHART DATA
+	   loaddata(); 	
+		
+	}
+	
+
+	
+function loaddata(){
+var myArray = [[x,y,z]];
+for (var i=0,  tot=myArray.length; i < tot; i++) {
+myBar.addData([x,y],z);
+//myBar.removeData();
+}
+}
+
+	
+
+	</script>
+
+     <script src="Chart.js"></script>
+	</body>
+</html>

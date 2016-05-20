@@ -1,0 +1,85 @@
+.main
+{
+position:absolute;
+width:100%;
+height: 400px;
+padding: 30px 30px 30px 30px;
+}
+
+
+ h1 {
+ position:relative;
+ font: 36px Bold Georgia, serif;
+ 
+ }
+ 
+ 
+#input, #answer, #chart
+{
+	float: left;
+	width: 300px;
+	height: 300px;
+	background-color: #e5f6ff;
+	padding: 20px;
+	margin: 5px 5px 5px 5px;
+	border: 1px ridge #cccccc;
+	font: 18px bold Georgia, serif;
+	box-sizing: border-box;
+	}
+
+	
+#answer
+{text-align:center;}
+
+
+#myForm 
+{
+padding: 10px 15px 10px 15px;
+}
+
+
+#kg, #m{
+padding: 10px 10px;
+border:none;
+}
+
+
+.button, .bmiInfo{
+background-color: #80b3ff;
+border:none;
+color:white;
+padding: 7px 17px;
+text-align:center;
+display:inline-block;
+font-size:16px;
+cursor:pointer;
+margin: 5px 0px 5px 0px;
+}
+
+	
+#result 
+{
+font: 40px Arial, san-serif;
+box-sizing:border-box;}
+
+
+td, tr {
+border: 1px groove #80b3ff;
+padding: 10px;
+border-collapse: collapse;
+text-align:center;
+background-color:#ffffff;
+}
+
+
+td {
+height: 100px;
+}
+
+
+#myTable {
+border-collapse:collapse;
+text-align:centre;
+margin: 10px 15px 10px 15px;
+}
+

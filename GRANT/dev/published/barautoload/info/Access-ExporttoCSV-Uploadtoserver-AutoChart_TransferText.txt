@@ -1,0 +1,9 @@
+Attach following code to a Button on click enven
+
+DoCmd.TransferText acExportDelim, , "qryTest", "C:\test.csv", False
+
+
+This exports to a CSV file without Headers
+False sets HasFieldNames to false
+
+Upload to webserver for chart data

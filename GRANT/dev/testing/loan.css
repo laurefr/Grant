@@ -1,0 +1,51 @@
+H1 {
+    font-family:arial;
+}
+
+H2 {
+    font-family:arial;
+}
+
+#wrapper {
+    width: 96%;
+    max-width: 920px;
+    margin: auto;
+    padding: 2%;
+    border: 0px solid #4d3159;
+    background-color: #c2a5cb;
+    min-height: 600px;
+}
+
+#outercontainer {
+    text-align:center;
+}
+
+
+.inputbox {
+margin-bottom:30px;    
+  font-family:arial;
+}
+
+#formbox {
+width: 20%;
+margin:auto;
+  font-family:arial;
+}
+
+#finput {
+min-height:40px;
+width:100%;
+ font-family:arial;
+}
+
+#inp {
+ float:left;
+}
+
+#inp2 {
+ float:right;
+}
+
+input[type="number"]{
+    width:80px;
+}
